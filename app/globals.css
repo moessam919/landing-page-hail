@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-diodrum), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: var(--font-diodrum), ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+/* Brush stroke animation */
+@keyframes brushDraw {
+    from {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+    }
+    to {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 0;
+    }
 }

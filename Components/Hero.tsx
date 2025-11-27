@@ -25,9 +25,27 @@ const Hero = () => {
 
                 {/* TEXT CONTENT */}
                 <div className="w-full md:w-1/2 text-right md:pr-10 order-2 md:order-1">
-                    <span className="inline-block py-2 px-4 rounded-full bg-blue-100 text-blue-600 text-sm font-bold mb-6 shadow-sm">
-                        السعودي الألماني عسير
-                    </span>
+                    <div className="relative inline-block mb-6">
+                        <span className="relative inline-block py-2 px-4 text-[#2eb34b] text-sm font-bold z-10">
+                            المستشفى السعودي الألماني عسير
+                        </span>
+                        {/* Brush stroke underline */}
+                        <svg
+                            className="absolute bottom-0 left-0 w-full h-3 -mb-1 z-0"
+                            viewBox="0 0 200 10"
+                            preserveAspectRatio="none"
+                            style={{ animation: 'brushDraw 0.8s ease-out' }}
+                        >
+                            <path
+                                d="M0,7 Q50,3 100,5 T200,6"
+                                stroke="#2eb34b"
+                                strokeWidth="4"
+                                fill="none"
+                                strokeLinecap="round"
+                                opacity="0.4"
+                            />
+                        </svg>
+                    </div>
 
                     <h2 className="text-2xl md:text-4xl font-bold text-gray-700 mb-4">
                         قسم طب وجراحة الأعصاب
