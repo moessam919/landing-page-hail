@@ -62,7 +62,7 @@ const Hero = () => {
                     </p>
 
                     <button className="bg-[#00aae6] hover:bg-[#2eb34b] text-white font-bold py-4 px-10 rounded-full transition duration-300 shadow-xl text-lg cursor-pointer">
-                        حجز استشارتك الآن
+                        أحجز استشارتك الآن
                     </button>
                 </div>
 
