@@ -37,7 +37,7 @@ const Hero = () => {
                             style={{ animation: 'brushDraw 0.8s ease-out' }}
                         >
                             <path
-                                d="M0,7 Q50,3 100,5 T200,6"
+                                d="M0,7 L200,7"
                                 stroke="#2eb34b"
                                 strokeWidth="4"
                                 fill="none"
@@ -62,7 +62,7 @@ const Hero = () => {
                     </p>
 
                     <button className="bg-[#00aae6] hover:bg-[#2eb34b] text-white font-bold py-4 px-10 rounded-full transition duration-300 shadow-xl text-lg cursor-pointer">
-                        أحجز استشارتك الآن
+                        احجز استشارتك الآن
                     </button>
                 </div>
 
