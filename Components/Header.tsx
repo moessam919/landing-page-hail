@@ -22,8 +22,9 @@ const Header = () => {
         {/* CTA Button */}
         <div>
           <button className="bg-[#00aae6] hover:bg-[#2eb34b] text-white font-bold py-3 px-4 md:px-8 rounded-full transition duration-300 shadow-md text-sm md:text-base cursor-pointer">
-            احجز استشارتك الآن
-
+            <a href="#contact-form">
+              احجز استشارتك الآن
+            </a>
           </button>
         </div>
       </div>

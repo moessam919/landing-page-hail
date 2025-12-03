@@ -8,19 +8,23 @@ import Image from "next/image";
 const doctors = [
     {
         id: 1,
-        image: "/doctor-1.webp",
+        image: "/doctor-1.png",
     },
     {
         id: 2,
-        image: "/doctor-2.webp",
+        image: "/doctor-2.png",
     },
     {
         id: 3,
-        image: "/doctor-3.webp",
+        image: "/doctor-3.png",
     },
     {
         id: 4,
-        image: "/doctor-4.webp",
+        image: "/doctor-4.png",
+    },
+    {
+        id: 5,
+        image: "/doctor-5.png",
     },
 ];
 
@@ -45,12 +49,13 @@ const DoctorsSection = () => {
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header - Right Aligned */}
-                <div className="text-right mb-12">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-                        أطباؤنا.. معك خطوة بخطوة
+                <div className="text-right mb-12 max-w-3xl mr-0 ml-auto">
+
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-tight">
+                        فريقنا الطبي
                     </h2>
-                    <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
-                        فريق طبي مؤهل يجمع بين الكفاءة والخبرة الطويلة، لتقديم رعاية دقيقة مبنية على العلم والتشخيص الموثوق.
+                    <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl">
+                        نخبة من الأطباء المتخصصين في: الجلدية – التجميل – طب الأسنان – التجميل النسائي، بخبرة سنوات ونتائج مثبتة.
                     </p>
                 </div>
 
@@ -104,6 +109,19 @@ const DoctorsSection = () => {
                             </svg>
                         </button>
                     </div>
+                </div>
+
+                {/* CTA Section */}
+                <div className="mt-12 text-center">
+                    <a href="#contact-form" className="group relative cursor-pointer bg-gradient-to-r from-[#00AEEF] to-cyan-500 hover:from-[#2eb34b] hover:to-green-500 text-white font-bold py-5 px-14 rounded-full transition-all duration-500 shadow-xl hover:shadow-2xl text-lg overflow-hidden inline-flex items-center justify-center">
+                        <span className="relative z-10 flex items-center gap-3 justify-center">
+                            احجز موعدك الآن
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </span>
+                        <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-right duration-500" />
+                    </a>
                 </div>
             </div>
         </section>

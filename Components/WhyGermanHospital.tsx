@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, Bed, Star, Globe, Stethoscope, Heart } from "lucide-react";
+import { Users, Bed, Star, Globe, Stethoscope, Heart, Sparkles } from "lucide-react";
 
 const statistics = [
     {
@@ -43,7 +43,7 @@ const statistics = [
 
 export default function WhyGermanHospital() {
     return (
-        <section className="pt-5 pb-10 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
+        <section className="py-14 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
             {/* Background Decorations */}
             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/20 to-cyan-100/20 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tl from-purple-100/20 to-pink-100/20 rounded-full blur-3xl pointer-events-none" />
@@ -52,8 +52,8 @@ export default function WhyGermanHospital() {
                 {/* Enhanced Section Header */}
                 <div className="text-right mb-20 max-w-4xl">
                     <div className="inline-flex items-center gap-2 mb-4">
-                        <div className="w-2 h-2 rounded-full bg-[#00AEEF] animate-pulse" />
-                        <span className="text-[#00AEEF] font-bold text-sm tracking-wider uppercase">
+                        <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-full text-sm font-semibold text-gray-700 border border-gray-200/50 shadow-sm">
+                            <Sparkles className="w-4 h-4" style={{ color: "#00AEEF" }} />
                             من نحن
                         </span>
                     </div>

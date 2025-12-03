@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SGH Aseer – Neurosurgery Center",
+  title: "SGH Hail – Dermatology & Aesthetic Center",
   description:
-    "Advanced neurosurgery care at Saudi German Hospital Aseer.",
+    "جمالك يبدأ من هنا. عناية متكاملة لبشرتك وجمالك في المستشفى السعودي الألماني – حائل، مع فريق متخصص من أطباء الجلدية والتجميل يقدمون رعاية شاملة باستخدام أحدث التقنيات وخطط علاجية مخصصة لك.",
   icons: {
     icon: "/favicon.svg",
   },

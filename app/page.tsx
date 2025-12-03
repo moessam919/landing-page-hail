@@ -5,6 +5,7 @@ import ServicesSection from "@/Components/ServicesSection";
 import WhyUsSection from "@/Components/WhyUsSection";
 import WhyGermanHospital from "@/Components/WhyGermanHospital";
 import ContactFormSection from "@/Components/ContactFormSection";
+import SectionsNavigation from "@/Components/SectionsNavigation";
 
 export default function Home() {
   return (
@@ -12,11 +13,13 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <DoctorsSection />
-        <ServicesSection />
+        <SectionsNavigation />
         <WhyUsSection />
+        <ServicesSection />
+        <DoctorsSection />
         <WhyGermanHospital />
         <ContactFormSection />
+
       </main>
     </div>
   );

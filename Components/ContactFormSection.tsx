@@ -24,7 +24,7 @@ export default function ContactFormSection() {
     };
 
     return (
-        <section className="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        <section id="contact-form" className="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50 relative overflow-hidden scroll-mt-20">
             {/* Background Decorations */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-100/30 to-cyan-100/30 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tl from-cyan-100/20 to-blue-100/20 rounded-full blur-3xl pointer-events-none" />
@@ -46,14 +46,13 @@ export default function ContactFormSection() {
                         </span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        خطوتك الأولى نحو العلاج{" "}
+                        نحن هنا لخدمتك والإجابة على جميع
+                        {" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#00AEEF] to-cyan-600">
-                            تبدأ هنا
+                            استفساراتك.
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600">
-                        نحن هنا لخدمتكم… تواصل معنا الآن
-                    </p>
+
                 </div>
 
                 {/* Contact Form Card */}

@@ -2,7 +2,8 @@ import Image from "next/image";
 
 const Hero = () => {
     return (
-        <section className="relative bg-gradient-to-br from-blue-50 to-white overflow-hidden min-h-[90vh] flex items-center pt-10 md:pt-5">
+        <section className="relative bg-gradient-to-br from-blue-50 to-white overflow-hidden min-h-[80vh] flex items-center pt-10 md:pt-5">
+
             {/* Background Pattern */}
             <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
                 <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -25,10 +26,13 @@ const Hero = () => {
 
                 {/* TEXT CONTENT */}
                 <div className="w-full md:w-1/2 text-right md:pr-10 order-2 md:order-1">
+
+                    {/* Hospital Tag */}
                     <div className="relative inline-block mb-6">
                         <span className="relative inline-block py-2 px-4 text-[#2eb34b] text-sm font-bold z-10">
-                            المستشفى السعودي الألماني عسير
+                            المستشفى السعودي الألماني – حائل
                         </span>
+
                         {/* Brush stroke underline */}
                         <svg
                             className="absolute bottom-0 left-0 w-full h-3 -mb-1 z-0"
@@ -47,32 +51,36 @@ const Hero = () => {
                         </svg>
                     </div>
 
+                    {/* Small Title */}
                     <h2 className="text-2xl md:text-4xl font-bold text-gray-700 mb-4">
-                        قسم طب وجراحة الأعصاب
+                        مركز الجلدية والتجميل
                     </h2>
 
+                    {/* Main Hero Title */}
                     <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-gray-900 leading-tight mb-8">
-                        تقنيات دقيقة,<br />
-                        <span className="text-[#00aae6] block md:inline">رعاية متقدمة,</span> {" "}
-                        <span className="text-[#2eb34b]">نتائج أفضل.</span>
+                        جمالك يبدأ من هنا،<br />
+                        <span className="text-[#00aae6] block md:inline">عناية متكاملة لبشرتك،</span>{" "}
+                        <span className="text-[#2eb34b]">تجربة مميزة.</span>
                     </h1>
 
+                    {/* Description */}
                     <p className="text-gray-600 text-lg md:text-xl mb-5 leading-relaxed font-medium max-w-lg ml-auto">
-                        نقدم أحدث التقنيات الطبية وفريق من الخبراء لضمان أفضل رعاية صحية لك ولعائلتك.
+                        في المستشفى السعودي الألماني – حائل، فريقنا المتخصص من أطباء الجلدية والتجميل
+                        جاهزون لتقديم رعاية متكاملة باستخدام أحدث التقنيات في المملكة. ملتزمون بتقديم
+                        أفضل تجربة لكم، ونوفر لكم خطط علاجية وتجميلية تلبي احتياجاتكم الشخصية.
                     </p>
 
-                    <button className="bg-[#00aae6] hover:bg-[#2eb34b] text-white font-bold py-4 px-10 rounded-full transition duration-300 shadow-xl text-lg cursor-pointer">
+                    <a href="#contact-form" className="inline-block bg-[#00aae6] hover:bg-[#2eb34b] text-white font-bold py-4 px-10 rounded-full transition duration-300 shadow-xl text-lg cursor-pointer">
                         احجز استشارتك الآن
-                    </button>
+                    </a>
                 </div>
 
-
-                {/* Image */}
+                {/* IMAGE */}
                 <div className="relative w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
-                    <div className="relative h-[35vh] md:h-[90vh] w-[90%] md:w-full">
+                    <div className="relative h-[40vh] md:h-[100vh] w-[90%] md:w-full">
                         <Image
-                            src="/doctor.png"
-                            alt="Doctor"
+                            src="/doctor-banner.png"
+                            alt="Dermatology Doctor"
                             fill
                             priority
                             className="object-contain object-bottom drop-shadow-2xl"
