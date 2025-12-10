@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactFormSection from "./ContactFormSection";
 
 const Hero = () => {
     return (
@@ -22,7 +23,7 @@ const Hero = () => {
                 </svg>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 flex flex-col-reverse md:flex-row items-center gap-12">
+            <div className="container mx-auto px-6 relative z-10 flex flex-col-reverse md:flex-row items-start md:items-center gap-8 md:gap-12">
 
                 {/* TEXT CONTENT */}
                 <div className="w-full md:w-1/2 text-right md:pr-10 order-2 md:order-1">
@@ -70,21 +71,13 @@ const Hero = () => {
                         أفضل تجربة لكم، ونوفر لكم خطط علاجية وتجميلية تلبي احتياجاتكم الشخصية.
                     </p>
 
-                    <a href="#contact-form" className="inline-block bg-[#00aae6] hover:bg-[#2eb34b] text-white font-bold py-4 px-10 rounded-full transition duration-300 shadow-xl text-lg cursor-pointer">
-                        احجز استشارتك الآن
-                    </a>
+
                 </div>
 
-                {/* IMAGE */}
+                {/* FORM */}
                 <div className="relative w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
-                    <div className="relative h-[40vh] md:h-[100vh] w-[90%] md:w-full">
-                        <Image
-                            src="/doctor-banner.png"
-                            alt="Dermatology Doctor"
-                            fill
-                            priority
-                            className="object-contain object-bottom drop-shadow-2xl"
-                        />
+                    <div className="relative w-full max-w-md">
+                        <ContactFormSection />
                     </div>
                 </div>
             </div>

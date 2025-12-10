@@ -58,7 +58,7 @@ export default function WhyGermanHospital() {
                         </span>
                     </div>
                     <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-                        لماذا المستشفى{" "}
+                        لماذا مستشفيات{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#00AEEF] to-cyan-600">
                             السعودي الألماني
                         </span>
@@ -67,7 +67,7 @@ export default function WhyGermanHospital() {
                     <div className="relative">
                         <div className="absolute right-0 top-0 w-1 h-full bg-gradient-to-b from-[#00AEEF] to-transparent rounded-full" />
                         <p className="text-xl md:text-2xl text-gray-700 leading-relaxed pr-6">
-                            انطلاقًا من شعارنا في المستشفى السعودي الألماني{" "}
+                            انطلاقًا من شعارنا في مستشفيات السعودية الألماني{" "}
                             <span className="text-[#00AEEF] font-bold">'نرعاكم كأهالينا'</span>
                             ، نتعهد بتقديم كافة الخدمات اللازمة بما يضمن لكم جودةً غير مسبوقة، لننال ثقتكم ونحظى باطمئنانكم الدائم، من خلال رعاية صحية متكاملة يقوم عليها نخبة من الأطباء والمتخصصين، وبأعلى معايير الدقة والاهتمام في كل خطوة من رحلتكم العلاجية.
                         </p>

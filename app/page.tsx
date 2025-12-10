@@ -4,7 +4,6 @@ import DoctorsSection from "@/Components/DoctorsSection";
 import ServicesSection from "@/Components/ServicesSection";
 import WhyUsSection from "@/Components/WhyUsSection";
 import WhyGermanHospital from "@/Components/WhyGermanHospital";
-import ContactFormSection from "@/Components/ContactFormSection";
 import SectionsNavigation from "@/Components/SectionsNavigation";
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
         <ServicesSection />
         <DoctorsSection />
         <WhyGermanHospital />
-        <ContactFormSection />
+
 
       </main>
     </div>
