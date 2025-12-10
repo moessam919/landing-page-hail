@@ -28,8 +28,6 @@ export default function ContactFormSection() {
             {/* Contact Form Card */}
             <div className="w-full">
                 <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-8 border border-gray-100 relative overflow-hidden">
-                    {/* Decorative Corner */}
-                    <div className="absolute top-0 right-0 w-32 h-20 bg-gradient-to-br from-[#00AEEF]/10 to-transparent rounded-bl-3xl" />
 
                     {/* Form Header */}
                     <div className="text-center mb-6 relative z-10">
