@@ -2,13 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
-import { Sparkles, ArrowLeft } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 const departments = [
     {
         id: 1,
         title: "الجلدية",
-        description: "عناية متخصصة بصحة وجمال البشرة من خلال أحدث التقنيات والعلاجات الطبية المتطورة",
+        description:
+            "عناية متخصصة بصحة وجمال البشرة من خلال أحدث التقنيات والعلاجات الطبية المتطورة",
         image: "/treatment.jpg",
         color: "#00AEEF",
     },
@@ -22,14 +23,16 @@ const departments = [
     {
         id: 3,
         title: "تجميل الأسنان",
-        description: "ابتسامة مشرقة وصحة دائمة مع خدمات طب الأسنان التجميلي الشاملة",
+        description:
+            "ابتسامة مشرقة وصحة دائمة مع خدمات طب الأسنان التجميلي الشاملة",
         image: "/patient-dentist.jpg",
         color: "#00c367",
     },
     {
         id: 4,
         title: "التجميل النسائي ومابعد الولادة",
-        description: "رعاية شاملة ومتخصصة للأم بعد الولادة لاستعادة الجمال والثقة",
+        description:
+            "رعاية شاملة ومتخصصة للأم بعد الولادة لاستعادة الجمال والثقة",
         image: "/pregnant.jpg",
         color: "#00AEEF",
     },
@@ -37,18 +40,31 @@ const departments = [
 
 const SectionsNavigation = () => {
     return (
-        <section className="py-14 relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white">
+        <section className="py-14 relative overflow-hidden bg-linear-to-b from-white via-gray-50 to-white">
             {/* Elegant Background */}
             <div className="absolute inset-0 pointer-events-none">
                 {/* Subtle Grid Pattern */}
-                <div className="absolute inset-0 opacity-[0.03]" style={{
-                    backgroundImage: `radial-gradient(circle at 2px 2px, #00AEEF 1.5px, transparent 1.5px)`,
-                    backgroundSize: '48px 48px'
-                }}></div>
+                <div
+                    className="absolute inset-0 opacity-[0.03]"
+                    style={{
+                        backgroundImage: `radial-gradient(circle at 2px 2px, #00AEEF 1.5px, transparent 1.5px)`,
+                        backgroundSize: "48px 48px",
+                    }}
+                ></div>
 
                 {/* Soft Gradient Orbs */}
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-20" style={{ background: `radial-gradient(circle, #00AEEF, transparent 70%)` }}></div>
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-20" style={{ background: `radial-gradient(circle, #00c367, transparent 70%)` }}></div>
+                <div
+                    className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-20"
+                    style={{
+                        background: `radial-gradient(circle, #00AEEF, transparent 70%)`,
+                    }}
+                ></div>
+                <div
+                    className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-20"
+                    style={{
+                        background: `radial-gradient(circle, #00c367, transparent 70%)`,
+                    }}
+                ></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -56,7 +72,10 @@ const SectionsNavigation = () => {
                 <div className="text-right mb-10 max-w-2xl mr-0 ml-auto">
                     <div className="inline-block mb-5">
                         <span className="inline-flex items-center gap-2 px-5 py-3 bg-white/90 backdrop-blur-sm rounded-full text-sm font-semibold text-gray-700 border border-gray-200/50 shadow-sm">
-                            <Sparkles className="w-4 h-4" style={{ color: "#00AEEF" }} />
+                            <Sparkles
+                                className="w-4 h-4"
+                                style={{ color: "#00AEEF" }}
+                            />
                             أقسامنا الطبية
                         </span>
                     </div>
@@ -64,7 +83,8 @@ const SectionsNavigation = () => {
                         أقسامنا
                     </h2>
                     <p className="text-xl text-gray-600 leading-relaxed">
-                        اكتشف خدماتنا المتخصصة في مختلف المجالات الطبية والتجميلية
+                        اكتشف خدماتنا المتخصصة في مختلف المجالات الطبية
+                        والتجميلية
                     </p>
                 </div>
 
@@ -75,7 +95,9 @@ const SectionsNavigation = () => {
                             key={dept.id}
                             className="group relative"
                             style={{
-                                animation: `elegantFadeIn 0.8s ease-out ${index * 0.15}s both`,
+                                animation: `elegantFadeIn 0.8s ease-out ${
+                                    index * 0.15
+                                }s both`,
                             }}
                         >
                             {/* Card Container */}
@@ -90,17 +112,22 @@ const SectionsNavigation = () => {
                                     />
 
                                     {/* Gradient Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
 
                                     {/* Colored Overlay on Hover */}
                                     <div
                                         className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-500"
-                                        style={{ background: `linear-gradient(135deg, ${dept.color}60, ${dept.color}90)` }}
+                                        style={{
+                                            background: `linear-gradient(135deg, ${dept.color}60, ${dept.color}90)`,
+                                        }}
                                     ></div>
 
                                     {/* Floating Icon */}
                                     <div className="absolute top-5 left-5 w-14 h-14 rounded-2xl backdrop-blur-xl bg-white/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-lg transform -translate-y-2 group-hover:translate-y-0">
-                                        <Sparkles className="w-6 h-6" style={{ color: dept.color }} />
+                                        <Sparkles
+                                            className="w-6 h-6"
+                                            style={{ color: dept.color }}
+                                        />
                                     </div>
                                 </div>
 
@@ -111,7 +138,9 @@ const SectionsNavigation = () => {
                                         {/* Decorative Accent */}
                                         <div
                                             className="w-20 h-1.5 rounded-full mr-0 ml-auto mb-5 transition-all duration-500 group-hover:w-32"
-                                            style={{ backgroundColor: dept.color }}
+                                            style={{
+                                                backgroundColor: dept.color,
+                                            }}
                                         ></div>
 
                                         {/* Title */}
@@ -124,8 +153,6 @@ const SectionsNavigation = () => {
                                             {dept.description}
                                         </p>
                                     </div>
-
-
 
                                     {/* Bottom Border Accent */}
                                     <div
