@@ -15,6 +15,9 @@ import {
     Scissors,
     Smile,
     Heart,
+    Activity,
+    Hospital,
+    TestTube,
 } from "lucide-react";
 
 // Define service categories with their items
@@ -118,12 +121,39 @@ const serviceCategories = [
             },
         ],
     },
+    {
+        id: "Beauty",
+        title: "قسم التجميل النسائي",
+        description:
+            "نهتم بصحة المرأة وجمالها عبر مجموعة من الخدمات المتخصصة التي تضمن نتائج آمنة وفعّالة:",
+        color: "#00c367",
+        services: [
+            {
+                id: 16,
+                title: "متابعة الحمل والحمل عالي المخاطر",
+                icon: <Activity className="w-6 h-6" />,
+            },
+            {
+                id: 17,
+                title: "الولادة الطبيعية والقيصرية",
+                icon: <Hospital className="w-6 h-6" />,
+            },
+            {
+                id: 18,
+                title: "علاج العقم",
+                icon: <TestTube className="w-6 h-6" />,
+            },
+            {
+                id: 19,
+                title: "الجراحات التجميلية النسائية",
+                icon: <Scissors className="w-6 h-6" />,
+            },
+        ],
+    },
 ];
 
 const ServicesSection = () => {
     const [activeCategory, setActiveCategory] = useState("dermatology");
-
-    const activeData = serviceCategories.find((cat) => cat.id === activeCategory);
 
     // Helper function to get lighter version of color
     const getLightColor = (color: string) => {
@@ -133,35 +163,105 @@ const ServicesSection = () => {
     };
 
     return (
-        <section className="py-14 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <section className="py-14 relative overflow-hidden bg-linear-to-br from-slate-50 via-white to-blue-50">
             {/* Beautiful Medical Pattern Background */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
                 {/* Medical Cross Pattern */}
-                <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <svg
+                    className="absolute inset-0 w-full h-full"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
                     <defs>
-                        <pattern id="medical-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <pattern
+                            id="medical-pattern"
+                            x="0"
+                            y="0"
+                            width="100"
+                            height="100"
+                            patternUnits="userSpaceOnUse"
+                        >
                             {/* Small medical crosses */}
                             <g opacity="0.15">
-                                <rect x="48" y="45" width="4" height="10" fill="#00AEEF" rx="1" />
-                                <rect x="45" y="48" width="10" height="4" fill="#00AEEF" rx="1" />
+                                <rect
+                                    x="48"
+                                    y="45"
+                                    width="4"
+                                    height="10"
+                                    fill="#00AEEF"
+                                    rx="1"
+                                />
+                                <rect
+                                    x="45"
+                                    y="48"
+                                    width="10"
+                                    height="4"
+                                    fill="#00AEEF"
+                                    rx="1"
+                                />
                             </g>
                             {/* Dots */}
-                            <circle cx="20" cy="20" r="1.5" fill="#00AEEF" opacity="0.2" />
-                            <circle cx="80" cy="80" r="1.5" fill="#00c367" opacity="0.2" />
+                            <circle
+                                cx="20"
+                                cy="20"
+                                r="1.5"
+                                fill="#00AEEF"
+                                opacity="0.2"
+                            />
+                            <circle
+                                cx="80"
+                                cy="80"
+                                r="1.5"
+                                fill="#00c367"
+                                opacity="0.2"
+                            />
                         </pattern>
                     </defs>
-                    <rect width="100%" height="100%" fill="url(#medical-pattern)" />
+                    <rect
+                        width="100%"
+                        height="100%"
+                        fill="url(#medical-pattern)"
+                    />
                 </svg>
 
                 {/* Gradient Orbs */}
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl" style={{ background: `radial-gradient(circle, ${getLightColor("#00AEEF")}80 0%, transparent 70%)` }}></div>
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl" style={{ background: `radial-gradient(circle, ${getLightColor("#00c367")}80 0%, transparent 70%)` }}></div>
-                <div className="absolute top-1/2 left-1/3 w-[400px] h-[400px] rounded-full blur-3xl" style={{ background: `radial-gradient(circle, ${getLightColor("#00AEEF")}60 0%, transparent 70%)` }}></div>
+                <div
+                    className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl"
+                    style={{
+                        background: `radial-gradient(circle, ${getLightColor(
+                            "#00AEEF"
+                        )}80 0%, transparent 70%)`,
+                    }}
+                ></div>
+                <div
+                    className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl"
+                    style={{
+                        background: `radial-gradient(circle, ${getLightColor(
+                            "#00c367"
+                        )}80 0%, transparent 70%)`,
+                    }}
+                ></div>
+                <div
+                    className="absolute top-1/2 left-1/3 w-[400px] h-[400px] rounded-full blur-3xl"
+                    style={{
+                        background: `radial-gradient(circle, ${getLightColor(
+                            "#00AEEF"
+                        )}60 0%, transparent 70%)`,
+                    }}
+                ></div>
 
                 {/* Floating Pills/Capsules Decoration */}
-                <div className="absolute top-20 right-32 w-16 h-6 rounded-full rotate-45 blur-sm" style={{ backgroundColor: `${getLightColor("#00AEEF")}` }}></div>
-                <div className="absolute bottom-32 left-24 w-20 h-7 rounded-full -rotate-12 blur-sm" style={{ backgroundColor: `${getLightColor("#00c367")}` }}></div>
-                <div className="absolute top-1/3 left-1/4 w-12 h-5 rounded-full rotate-90 blur-sm" style={{ backgroundColor: `${getLightColor("#00AEEF")}` }}></div>
+                <div
+                    className="absolute top-20 right-32 w-16 h-6 rounded-full rotate-45 blur-sm"
+                    style={{ backgroundColor: `${getLightColor("#00AEEF")}` }}
+                ></div>
+                <div
+                    className="absolute bottom-32 left-24 w-20 h-7 rounded-full -rotate-12 blur-sm"
+                    style={{ backgroundColor: `${getLightColor("#00c367")}` }}
+                ></div>
+                <div
+                    className="absolute top-1/3 left-1/4 w-12 h-5 rounded-full rotate-90 blur-sm"
+                    style={{ backgroundColor: `${getLightColor("#00AEEF")}` }}
+                ></div>
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -169,7 +269,10 @@ const ServicesSection = () => {
                 <div className="text-right mb-16 max-w-2xl mr-0 ml-auto">
                     <div className="inline-block mb-4">
                         <span className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-sm rounded-full text-sm font-semibold text-gray-700 border border-gray-200/50 shadow-sm">
-                            <Sparkles className="w-4 h-4" style={{ color: "#00AEEF" }} />
+                            <Sparkles
+                                className="w-4 h-4"
+                                style={{ color: "#00AEEF" }}
+                            />
                             خدماتنا الطبية المتميزة
                         </span>
                     </div>
@@ -177,7 +280,8 @@ const ServicesSection = () => {
                         قسم خدماتنا
                     </h2>
                     <p className="text-gray-600 text-xl leading-relaxed font-medium">
-                        نقدم مجموعة شاملة من الخدمات الطبية والتجميلية المتخصصة بأعلى معايير الجودة والاحترافية
+                        نقدم مجموعة شاملة من الخدمات الطبية والتجميلية المتخصصة
+                        بأعلى معايير الجودة والاحترافية
                     </p>
                 </div>
 
@@ -189,17 +293,18 @@ const ServicesSection = () => {
                             onClick={() => setActiveCategory(category.id)}
                             className={`
                                 relative px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-500 cursor-pointer 
-                                ${activeCategory === category.id
-                                    ? "text-white shadow-2xl scale-105"
-                                    : "bg-white/90 backdrop-blur-sm text-gray-700 hover:shadow-lg border-2 border-gray-200/50 hover:border-gray-300"
+                                ${
+                                    activeCategory === category.id
+                                        ? "text-white shadow-2xl scale-105"
+                                        : "bg-white/90 backdrop-blur-sm text-gray-700 hover:shadow-lg border-2 border-gray-200/50 hover:border-gray-300"
                                 }
                             `}
                             style={
                                 activeCategory === category.id
                                     ? {
-                                        backgroundColor: category.color,
-                                        boxShadow: `0 20px 50px -12px ${category.color}40`,
-                                    }
+                                          backgroundColor: category.color,
+                                          boxShadow: `0 20px 50px -12px ${category.color}40`,
+                                      }
                                     : {}
                             }
                         >
@@ -218,14 +323,22 @@ const ServicesSection = () => {
                         key={category.id}
                         className={`
                             transition-all duration-700 
-                            ${activeCategory === category.id ? "opacity-100 block" : "opacity-0 hidden"}
+                            ${
+                                activeCategory === category.id
+                                    ? "opacity-100 block"
+                                    : "opacity-0 hidden"
+                            }
                         `}
                     >
                         {/* Category Description - Right Aligned */}
                         <div className="text-right mb-14">
                             <div
                                 className="inline-block px-8 py-4 rounded-2xl border-2 border-white shadow-lg backdrop-blur-sm"
-                                style={{ backgroundColor: getLightColor(category.color) }}
+                                style={{
+                                    backgroundColor: getLightColor(
+                                        category.color
+                                    ),
+                                }}
                             >
                                 <p className="text-gray-800 text-lg md:text-xl font-semibold">
                                     {category.description}
@@ -240,28 +353,37 @@ const ServicesSection = () => {
                                     key={service.id}
                                     className="group relative"
                                     style={{
-                                        animation: `fadeInUp 0.7s ease-out ${index * 0.12}s both`,
+                                        animation: `fadeInUp 0.7s ease-out ${
+                                            index * 0.12
+                                        }s both`,
                                     }}
                                 >
-                                    <div
-                                        className="relative h-full p-8 rounded-3xl bg-white/95 backdrop-blur-sm border-2 border-gray-100 transition-all duration-500 hover:border-transparent hover:shadow-2xl hover:-translate-y-2  overflow-hidden"
-                                    >
+                                    <div className="relative h-full p-8 rounded-3xl bg-white/95 backdrop-blur-sm border-2 border-gray-100 transition-all duration-500 hover:border-transparent hover:shadow-2xl hover:-translate-y-2  overflow-hidden">
                                         {/* Animated Gradient Background on Hover */}
                                         <div
                                             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 -z-10"
-                                            style={{ backgroundColor: category.color }}
+                                            style={{
+                                                backgroundColor: category.color,
+                                            }}
                                         ></div>
 
                                         {/* Content Container */}
                                         <div className="flex items-start gap-5 text-right relative z-10">
                                             {/* Icon Container */}
                                             <div
-                                                className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:bg-white/30 group-hover:scale-110 group-hover:rotate-6 shadow-lg"
-                                                style={{ backgroundColor: getLightColor(category.color) }}
+                                                className="shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:bg-white/30 group-hover:scale-110 group-hover:rotate-6 shadow-lg"
+                                                style={{
+                                                    backgroundColor:
+                                                        getLightColor(
+                                                            category.color
+                                                        ),
+                                                }}
                                             >
                                                 <div
                                                     className="transition-colors duration-500 group-hover:text-white"
-                                                    style={{ color: category.color }}
+                                                    style={{
+                                                        color: category.color,
+                                                    }}
                                                 >
                                                     {service.icon}
                                                 </div>
@@ -279,7 +401,9 @@ const ServicesSection = () => {
                                         {/* Bottom Accent Line */}
                                         <div
                                             className="absolute bottom-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                                            style={{ backgroundColor: category.color }}
+                                            style={{
+                                                backgroundColor: category.color,
+                                            }}
                                         ></div>
                                     </div>
                                 </div>
@@ -298,12 +422,20 @@ const ServicesSection = () => {
                                 خيارات دفع سهلة ومريحة
                             </h3>
                             <p className="text-gray-600 text-lg mb-8">
-                                يمكنكم الدفع فورًا بـ <span className="font-bold text-gray-900">الكاش</span> أو <span className="font-bold text-gray-900">الفيزا</span>، أو اختيار التقسيط مع شركاء التقسيط
+                                يمكنكم الدفع فورًا بـ{" "}
+                                <span className="font-bold text-gray-900">
+                                    الكاش
+                                </span>{" "}
+                                أو{" "}
+                                <span className="font-bold text-gray-900">
+                                    الفيزا
+                                </span>
+                                ، أو اختيار التقسيط مع شركاء التقسيط
                             </p>
 
                             {/* Partners */}
                             <div className="flex items-center justify-center gap-6 flex-wrap">
-                                <div className="px-6 py-3 bg-gradient-to-r from-gray-50 to-white rounded-2xl shadow-md border border-gray-200 h-16 flex items-center justify-center min-w-[120px]">
+                                <div className="px-6 py-3 bg-linear-to-r from-gray-50 to-white rounded-2xl shadow-md border border-gray-200 h-16 flex items-center justify-center min-w-[120px]">
                                     <Image
                                         src="/tabby-badge.png"
                                         alt="Tabby"
@@ -312,7 +444,7 @@ const ServicesSection = () => {
                                         className="object-contain"
                                     />
                                 </div>
-                                <div className="px-6 py-3 bg-gradient-to-r from-gray-50 to-white rounded-2xl shadow-md border border-gray-200 h-16 flex items-center justify-center min-w-[120px]">
+                                <div className="px-6 py-3 bg-linear-to-r from-gray-50 to-white rounded-2xl shadow-md border border-gray-200 h-16 flex items-center justify-center min-w-[120px]">
                                     <Image
                                         src="/tamara.svg"
                                         alt="Tamara"
@@ -321,7 +453,7 @@ const ServicesSection = () => {
                                         className="object-contain"
                                     />
                                 </div>
-                                <div className="px-6 py-3 bg-gradient-to-r from-gray-50 to-white rounded-2xl shadow-md border border-gray-200 h-16 flex items-center justify-center min-w-[120px]">
+                                <div className="px-6 py-3 bg-linear-to-r from-gray-50 to-white rounded-2xl shadow-md border border-gray-200 h-16 flex items-center justify-center min-w-[120px]">
                                     <Image
                                         src="/baseta.svg"
                                         alt="Baseta"
@@ -334,7 +466,7 @@ const ServicesSection = () => {
                         </div>
 
                         {/* Bottom Gradient Bar */}
-                        <div className="h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#00c367] to-[#00AEEF]"></div>
+                        <div className="h-1.5 bg-linear-to-r from-[#00AEEF] via-[#00c367] to-[#00AEEF]"></div>
                     </div>
                 </div>
             </div>
